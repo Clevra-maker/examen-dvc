@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 # Chargement des jeux de données
-file_path = "../../data/processed_data/"
+file_path = "data/processed_data/"
 X_train = pd.read_csv(file_path + "X_train.csv")
 X_test = pd.read_csv(file_path + "X_test.csv")
 

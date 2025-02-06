@@ -10,7 +10,7 @@ from sklearn.linear_model import Ridge
 from sklearn.ensemble import RandomForestRegressor
 
 # Chargement des données
-file_path = "../../data/processed_data/"
+file_path = "data/processed_data/"
 X_train_scaled = pd.read_csv(file_path + "X_train_scaled.csv")
 y_train = pd.read_csv(file_path + "y_train.csv")
 
@@ -27,6 +27,6 @@ grid_search.fit(X_train_scaled, y_train.to_numpy().ravel())
 best_params = grid_search.best_params_
 
 # Sauvegarde des meilleurs paramètres
-file_path = "../../models/"
+file_path = "models/"
 with open(file_path + "best_params.pkl", "wb") as f:
     pickle.dump(best_params, f)
