@@ -23,3 +23,11 @@ stages:
     - data/processed_data/y_train.csv
     outs:
     - models/best_params.pkl
+  train_model:
+    cmd: python src/models/train_model.py
+    deps:
+    - data/processed_data/X_train_scaled.csv
+    - data/processed_data/y_train.csv
+    - models/best_params.pkl
+    outs:
+    - models/random_forest_model.pkl
