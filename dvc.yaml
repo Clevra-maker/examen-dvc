@@ -38,7 +38,7 @@ stages:
     - data/processed_data/y_test.csv
     - models/random_forest_model.pkl
     outs:
-    - data/processed_data/predictions.csv
+    - data/predictions.csv
     metrics:
     - metrics/scores.json:
         cache: false
